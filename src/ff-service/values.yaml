@@ -5,6 +5,7 @@ global:
   loadbalancerURL: "test@harness.io"
   airgap: false
   ha: false
+  # Enable if using ingress objects
   ingress:
     enabled: false
     className: "nginx"
@@ -13,7 +14,7 @@ global:
     tls:
       enabled: false
       secretName: harness-ssl
-    
+
 replicaCount: 1
 maxSurge: 1
 maxUnavailable: 0
