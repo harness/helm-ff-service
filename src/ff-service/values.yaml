@@ -43,10 +43,6 @@ jobs:
       pullPolicy: Always
       digest: ""
 
-commonAnnotations: {}
-
-commonLabels: {}
-
 configmap: {}
 
 timescaleSecret:
@@ -54,8 +50,7 @@ timescaleSecret:
     name: harness-secrets
     key: timescaledbPostgresPassword
 
-java:
-  memory: 4096
+memory: 4096
 
 appLogLevel: INFO
 
