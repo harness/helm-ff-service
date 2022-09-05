@@ -8,7 +8,6 @@ A Helm chart for Kubernetes
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.bitnami.com/bitnami | common | 2.x.x |
 | https://harness.github.io/helm-common | harness-common | 1.x.x |
 
 ## Values
@@ -21,8 +20,6 @@ A Helm chart for Kubernetes
 | autoscaling.maxReplicas | int | `100` |  |
 | autoscaling.minReplicas | int | `1` |  |
 | autoscaling.targetCPUUtilizationPercentage | int | `80` |  |
-| commonAnnotations | object | `{}` |  |
-| commonLabels | object | `{}` |  |
 | configmap | object | `{}` |  |
 | fullnameOverride | string | `""` |  |
 | global.airgap | bool | `false` |  |
@@ -38,7 +35,6 @@ A Helm chart for Kubernetes
 | image.registry | string | `"docker.io"` |  |
 | image.repository | string | `"harness/ff-server-signed"` |  |
 | image.tag | string | `"1.546.0"` |  |
-| java.memory | int | `4096` |  |
 | jobs.postgres_migration.image.digest | string | `""` |  |
 | jobs.postgres_migration.image.pullPolicy | string | `"Always"` |  |
 | jobs.postgres_migration.image.registry | string | `"docker.io"` |  |
@@ -51,6 +47,7 @@ A Helm chart for Kubernetes
 | jobs.timescaledb_migrate.image.tag | string | `"1.546.0"` |  |
 | maxSurge | int | `1` |  |
 | maxUnavailable | int | `0` |  |
+| memory | int | `4096` |  |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
 | podAnnotations | object | `{}` |  |

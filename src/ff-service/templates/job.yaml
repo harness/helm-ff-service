@@ -21,7 +21,6 @@ spec:
       {{- end }}
       labels:
         job-name: ff-service-db-migrate-1-546
-        {{- include "ff-service.selectorLabels" . | nindent 8 }}
     spec:
       containers:
       - name: ff-service-db-migrate
@@ -98,7 +97,6 @@ spec:
       {{- end }}
       labels:
         job-name: ff-service-timescale-db-migrate-1-546
-        {{- include "ff-service.selectorLabels" . | nindent 8 }}
     spec:
       containers:
       - name: ff-service-timescale-db-migrate
