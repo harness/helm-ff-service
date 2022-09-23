@@ -1,0 +1,18 @@
+apiVersion: v1
+entries:
+  ff-service:
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2022-09-23T13:11:42.226600375Z"
+    dependencies:
+    - name: harness-common
+      repository: https://harness.github.io/helm-common
+      version: 1.x.x
+    description: A Helm chart for Kubernetes
+    digest: 04ef347a579aab4690c8f422804c5d82d62175187c069d57e5b71a67fe4529cf
+    name: ff-service
+    type: application
+    urls:
+    - https://github.com/harness/helm-ff-service/releases/download/ff-service-0.2.5/ff-service-0.2.5.tgz
+    version: 0.2.5
+generated: "2022-09-23T13:11:42.226606675Z"
