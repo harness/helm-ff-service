@@ -9,10 +9,6 @@ metadata:
 spec:
   ttlSecondsAfterFinished: 300
   backoffLimit: 1
-  selector:
-    matchLabels:
-      job-name: ff-service-db-migrate-1-546
-      {{- include "ff-service.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       annotations:
@@ -85,10 +81,6 @@ metadata:
 spec:
   ttlSecondsAfterFinished: 300
   backoffLimit: 1
-  selector:
-    matchLabels:
-      job-name: ff-service-timescale-db-migrate-1-546
-      {{- include "ff-service.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       annotations:
