@@ -1,7 +1,7 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: ff-service-db-migrate-1-546
+  name: ff-service-db-migrate-1-546-{{ lower ( randAlphaNum 6 ) }}
   namespace: {{ .Release.Namespace }}
   annotations:
   labels:
@@ -73,7 +73,7 @@ spec:
 apiVersion: batch/v1
 kind: Job
 metadata:
-  name: ff-service-timescale-db-migrate-1-546
+  name: ff-service-timescale-db-migrate-1-546-{{ lower ( randAlphaNum 6 ) }}
   namespace: {{ .Release.Namespace }}
   annotations:
   labels:
