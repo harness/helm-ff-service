@@ -67,7 +67,7 @@ spec:
           - name: http-ff-service
             containerPort: {{.Values.service.port}}
             protocol: "TCP"
-          - name: grpc-gitsync-ff-service
+          - name: grpc-gitsync
             containerPort: {{.Values.service.grpcport}}
             protocol: "TCP"
           resources:
