@@ -15,8 +15,6 @@ spec:
       {{- with .Values.podAnnotations }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      labels:
-        job-name: ff-service-db-migrate-1-546
     spec:
       containers:
       - name: ff-service-db-migrate
@@ -87,8 +85,6 @@ spec:
       {{- with .Values.podAnnotations }}
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      labels:
-        job-name: ff-service-timescale-db-migrate-1-546
     spec:
       containers:
       - name: ff-service-timescale-db-migrate
