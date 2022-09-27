@@ -12,7 +12,7 @@ spec:
     port: {{.Values.service.port}}
     protocol: TCP
     targetPort: {{.Values.service.targetport}}
-  - name: grpc-gitsync-ff-service
+  - name: grpc-gitsync
     port: {{.Values.service.grpcport}}
     protocol: TCP
     targetPort: {{.Values.service.targetgrpcport}}
