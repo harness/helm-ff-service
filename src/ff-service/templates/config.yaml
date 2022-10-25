@@ -21,7 +21,7 @@ data:
   EVENTS_FRAMEWORK_REDIS_USE_SENTINEL: "true"
   EVENTS_FRAMEWORK_REDIS_SENTINEL_MASTER: 'harness-redis'
   EVENTS_FRAMEWORK_REDIS_SENTINEL_URLS: 'redis-sentinel-harness-announce-0.{{ .Release.Namespace }}:26379,redis://redis-sentinel-harness-announce-1.{{ .Release.Namespace }}:26379,redis://redis-sentinel-harness-announce-2.{{ .Release.Namespace  }}:26379'
-  SSL_MODE: require
+  SSL_MODE: disable
   GRIP_URL: "http://pushpin-clusterip:5561"
   PLATFORM_INTEGRATION_ENABLED: "true"
   PLATFORM_BASE_URL: '{{ .Values.global.loadbalancerURL }}/ng/api/'
@@ -31,7 +31,7 @@ data:
   CLIENT_ENABLE: "true"
   METRICS_ENABLE: "true"
   METRICS_PROCESSING: "true"
-  ANALYTICS_SSL_MODE: require
+  ANALYTICS_SSL_MODE: disable
   ANALYTICS_DB_DRIVER: postgres
   LOG_LEVEL: {{ .Values.appLogLevel }}
   USE_CF_REDIS: "false"

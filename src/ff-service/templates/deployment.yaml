@@ -57,6 +57,12 @@ spec:
         args:
           - "pod"
           - "-lapp=redis-sentinel"
+      - name: wait-for-ng-manager
+        image: {{ include "common.images.image" (dict "imageRoot" .Values.waitForInitContainer.image "global" .Values.global) }}
+        imagePullPolicy: IfNotPresent
+        args:
+          - "pod"
+          - "-lapp=ng-manager"
       containers:
         - name: ff-service
           image: {{ include "common.images.image" (dict "imageRoot" .Values.image "global" .Values.global) }}
