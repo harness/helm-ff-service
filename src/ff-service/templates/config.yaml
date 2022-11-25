@@ -55,6 +55,11 @@ data:
   DB_PORT: "5432"
   PLATFORM_SECRET_KEY: IC04LYMBf1lDP5oeY4hupxd4HJhLmN6azUku3xEbeE3SUx5G3ZYzhbiwVtK4i7AmqyU9OZkwB4v8E9qM
   AUTH_SECRET: IC04LYMBf1lDP5oeY4hupxd4HJhLmN6azUku3xEbeE3SUx5G3ZYzhbiwVtK4i7AmqyU9OZkwB4v8E9qM
+  {{- if .Values.global.opa.enabled }}
+  POLICY_MGMT_SERVICE_URL: 'http://policy-mgmt.{{ .Release.Namespace }}.svc.cluster.local:3000/'
+  POLICY_MGMT_SECRET: "HVSKUYqD4e5Rxu12hFDdCJKGM64sxgEynvdDhaOHaTHhwwn0K4Ttr0uoOxSsEVYNrUU="
+  POLICY_MGMT_ENABLED: 'true'
+  {{- end }}
 {{- if .Values.configmap }}
 {{- include "common.tplvalues.render" (dict "value" .Values.configmap "context" $) | nindent 4 }}
 {{- end }}

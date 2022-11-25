@@ -5,6 +5,8 @@ global:
   loadbalancerURL: "test@harness.io"
   airgap: false
   ha: false
+  opa:
+    enabled: false
   # Enable if using ingress objects
   ingress:
     enabled: false
